@@ -2,7 +2,11 @@ from sys import exit
 from validaciones_Errors import ErrorTelephoneNumber, ErrorCURP, ErrorAge, ErrorEmail 
 import re 
 
-
+    """
+    Toma un número de teléfono como entrada, verifica si es válido y, si no lo es, le pide al usuario
+    que ingrese uno válido.
+    :return: El numero de telefono
+    """
 def TELEPHONE_FORM():
     try:
         tel = input('Introduce el telefono: ')
@@ -17,7 +21,12 @@ def TELEPHONE_FORM():
             tel = TELEPHONE_FORM()
     
     return tel 
+    
 
+    """
+    Toma una cadena como entrada, verifica si es un CURP válido y devuelve la cadena si lo es.
+    :return: La CURP
+    """
 def CURP_FORM():
     try:
         curp = input("Introduce tu CURP: ")
@@ -35,6 +44,11 @@ def CURP_FORM():
         
     return curp
 
+
+    """
+    Si el usuario ingresa una letra, la función generará una excepción y se volverá a llamar a sí misma
+    :return: La edad.
+    """
 def AGE_FORM():
     try:
         edad = input('Introduce tu edad: ')
@@ -52,6 +66,13 @@ def AGE_FORM():
       
     return edad
 
+
+    """
+    Si el usuario ingresa un correo electrónico válido, devuélvalo. Si el usuario ingresa un correo
+    electrónico no válido, imprima un mensaje de error y solicite un nuevo correo electrónico. Si el
+    usuario ingresa 'salir', sale del programa
+    :return: El correo electrónico
+    """
 def EMAIL_FORM():
     try:
         email = input('Introduce tu email: ')
