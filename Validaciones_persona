@@ -1,0 +1,15 @@
+class Persona:
+    
+    def __init__(self, nombre, curp, edad, telefono, email):
+        self.nombre = nombre
+        self.curp = curp
+        self.edad = edad
+        self.telefono = telefono
+        self.email = email
+         
+    def mostrar_info(self):
+        print('Nombre: ', self.nombre)
+        print('Curp: ', self.curp.upper())
+        print('Edad: ', self.edad)
+        print('Telefono: ', self.telefono)
+        print('email: ', self.email)
