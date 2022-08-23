@@ -1,20 +1,26 @@
+# Conjunto de clases que heredan de la clase Exception y tiene un constructor que toma un mensaje como
+# argumento y establece el mensaje como un atributo de la clase.
+
 class ErrorTelephoneNumber(Exception):
     
     def __init__(self, message = 'Número de teléfono no válido'):
         self.message = message 
         super().__init__(self.message)
         
+                
 class ErrorCURP(Exception):
     
     def __init__(self, message = 'Curp no válida'):
         self.message = message 
         super().__init__(self.message)
-        
+
+
 class ErrorAge(Exception):
     
     def __init__(self, message = 'Edad no válida'):
         self.message = message 
         super().__init__(self.message)
+        
         
 class ErrorEmail(Exception):
     
