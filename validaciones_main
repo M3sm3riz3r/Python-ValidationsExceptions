@@ -1,11 +1,13 @@
 from validaciones_persona import Persona
 from validaciones_form_functions import TELEPHONE_FORM, CURP_FORM, AGE_FORM, EMAIL_FORM
 
+# Solicitar al usuario que ingrese su nombre, curp, teléfono, edad y correo electrónico.
 name = input('Introduce tu nombre: ')
 curp = CURP_FORM()
 telefono = TELEPHONE_FORM()
 edad = AGE_FORM()
 email = EMAIL_FORM()
 
+# Creando una instancia de la clase Persona y llamando al método mostrar_info()
 persona =  Persona(curp=curp, email=email, nombre=name, edad=edad, telefono=telefono)
 persona.mostrar_info()
