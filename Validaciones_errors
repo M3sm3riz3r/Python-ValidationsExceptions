@@ -1,0 +1,23 @@
+class ErrorTelephoneNumber(Exception):
+    
+    def __init__(self, message = 'Número de teléfono no válido'):
+        self.message = message 
+        super().__init__(self.message)
+        
+class ErrorCURP(Exception):
+    
+    def __init__(self, message = 'Curp no válida'):
+        self.message = message 
+        super().__init__(self.message)
+        
+class ErrorAge(Exception):
+    
+    def __init__(self, message = 'Edad no válida'):
+        self.message = message 
+        super().__init__(self.message)
+        
+class ErrorEmail(Exception):
+    
+    def __init__(self, message = 'Email no válida'):
+        self.message = message 
+        super().__init__(self.message)
